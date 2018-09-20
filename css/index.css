@@ -1,0 +1,79 @@
+
+body{
+  background-color: green;
+}
+.container{
+  width: 90%;
+  height: 90%;
+}
+.titulo{
+  color: yellow;
+  font-style: italic;
+  text-align: center;
+  font-family: Chancery;
+}
+.contato{
+  color: white;
+  float: right;
+  font-size: 16px;
+}
+.menu{
+  background-color: SkyBlue;
+  float: right;
+}
+.menu-principal{
+  margin:15px;
+  display: flex;
+  margin: auto;
+  float: right;
+}
+.imagem{
+  display: flex;
+  margin: auto;
+  max-width:20%;
+  max-height:20%;
+  width: auto;
+  height: auto;
+}
+.menu-contato{
+  float: right;
+
+  background-color: purple;
+  font-size: 0;
+}
+.gem-contacts-item{
+  float:   right;
+  color: white;
+  font-family: monospace,sans-serif;
+}
+.icones-sociais{
+    float: right;
+}
+
+.facebook{
+  background-image: url(../img/facebook.jpg);
+  background-color:purple
+  margin-right: 2px;
+  font-size: 0px;
+  max-width:35px;
+  max-height:35px;
+  width: auto;
+  height: auto;
+}
+.instagram{
+  background-image: url(../img/instagram.jpg);
+  background: purple
+  margin-right: 2px;
+  font-size: 0px;
+  max-width:35px;
+  max-height:35px;
+  width: auto;
+  height: auto;
+}
+/* footer {
+  background-color: black;
+  color: White;
+  position:   relative;
+  width: 100%;
+
+} */
