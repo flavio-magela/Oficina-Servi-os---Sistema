@@ -8,14 +8,30 @@ body{
 }
 .titulo{
   color: red;
-  font-style: italic;
+  size:7x;
   text-align: center;
-  font-family: Chancery;
+  font-size: 20px;
+
+}
+.titulo2{
+  color: darkred;
+  text-align: center;
+  font-size: 16px;
+  font-family: monospace,sans-serif;
+
 }
 .contato{
   color: white;
   float: right;
   font-size: 16px;
+}
+.sub-Menu{
+  color: red;
+  font-size: 16px;
+  font-family: monospace,sans-serif;
+}
+.size{
+  size: 5x;
 }
 .menu{
   background-color: SkyBlue;
