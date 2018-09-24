@@ -1,3 +1,9 @@
+<?php
+
+  include ("conexao/conexao_msql.php")
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -80,18 +86,28 @@
       <!-- Navar Menu Forncedores -->
       <nav class="navbar navbar-light navbar-light" style="background-color: #A4A4A4;">
           <a class="navbar-brand titulo" href="#"><i class="far fa-handshake titulo mr-2"></i>Fornecedores</a>
-          <button class="btn btn-LightGrey ml-auto " type="Submit"><i class="fas fa-user-plus"></i></button>
-          <button class="btn btn-LightGrey ml-auto " type="Submit"><i class="fas fa-save"></i></button>
-          <button class="btn btn-LightGrey ml-auto " type="Submit"><i class="fas fa-trash-alt"></i></button>
-          <button class="btn btn-LightGrey ml-auto " type="Submit"><i class="fas fa-undo-alt"></i></button>
-          <button class="btn btn-LightGrey ml-auto " type="Submit"><i class="fas fa-backward"></i></button>
-          <button class="btn btn-LightGrey ml-auto " type="Submit"><i class="fas fa-forward"></i></button>
-          <button class="btn btn-LightGrey ml-auto " type="Submit"><i class="fas fa-search"></i></button>
-          <button class="btn btn-LightGrey ml-auto " type="Submit"><i class="fas fa-times"></i></button>
+          <button tabindex="0" class=" btn btn-info ml-auto "data-toggle="popover"  data-placement="right" data-trigger="focus" title="Novo" type="Submit"><i class="fas fa-user-plus"></i></button>
+
+          <button tabindex="0" class=" btn btn-info ml-auto "data-toggle="popover"  data-placement="right" data-trigger="focus" title="Salvar" type="Submit"><i class="fas fa-save"></i></button>
+
+          <button tabindex="0" class=" btn btn-info ml-auto "data-toggle="popover"  data-placement="right" data-trigger="focus" title="Excluir" type="Submit"><i class="fas fa-trash-alt"></i></button>
+
+          <button tabindex="0" class=" btn btn-info ml-auto "data-toggle="popover"  data-placement="right" data-trigger="focus" title="Limpar" type="Submit"><i class="fas fa-undo-alt"></i></button>
+
+          <button tabindex="0" class=" btn btn-info ml-auto "data-toggle="popover"  data-placement="right" data-trigger="focus" title="Anterior" type="Submit"><i class="fas fa-backward"></i></button>
+
+          <button tabindex="0" class=" btn btn-info ml-auto "data-toggle="popover"  data-placement="right" data-trigger="focus" title="Próximo" type="Submit"><i class="fas fa-forward"></i></button>
+
+          <button tabindex="0" class=" btn btn-info ml-auto "data-toggle="popover"  data-placement="right" data-trigger="focus" title="Localizar" type="Submit"><i class="fas fa-search"></i></button>
+
+          <button tabindex="0" class=" btn btn-info ml-auto "data-toggle="popover"  data-placement="right" data-trigger="focus" title="Imprimir" type="Submit"><i class="fas fa-print"></i></button>
+
+          <button tabindex="0" class=" btn btn-info ml-auto "data-toggle="popover"  data-placement="right" data-trigger="focus" title="Sair" type="Submit"><i class="fas fa-times"></i></button>
+
       </nav>
       <div class="row justify-content-center mb-5">
-        <div class="col-sm-12 col-md-10 col-lg-8">
-          <form >
+        <div class="col-sm-12 col-md-10 col-lg-8"><br>
+          <form  ><br>
               <div class="form-row">
                     <div class="form-group col-sm-1">
                         <label for="<inputCodigo">Código</label>
@@ -99,35 +115,36 @@
                     </div>
                     <div class="form-group col-sm-5">
                         <label for="<inputFornecedor">Fornecedor</label>
-                        <input type="text" class="form-control" id="inputFornecedor" placeholder="Fornecedor">
+                        <input type="text" class="form-control" id="inputFornecedor" placeholder="Fornecedor"required>
+                    </div>
+                    <div class="form-group col-sm-3">
+                        <label for="<inputResp">Responsável</label>
+                        <input  type="text" class="form-control" id="inputResp" placeholder="Responsável"required>
                     </div>
                     <div class="form-group col-sm-3">
                         <label for="<inputCnpj">CNPJ</label>
-                        <input type="text" class="form-control" id="inputCnpj" placeholder="CNPJ">
+                        <input  type="text" class="form-control" id="inputCnpj" placeholder="CNPJ"required>
                     </div>
-                    <div class="form-group col-sm-3">
-                        <label for="<inputIns">Insc. Estadual</label>
-                        <input type="text" class="form-control" id="inputIns" placeholder="Insc. Estadual">
-                    </div>
+
               </div>
               <div class="form-row">
                   <div class="form-group col-sm-5">
                       <label for="<inputEndereco">Endereço</label>
-                      <input type="text" class="form-control" id="inputEndereco" placeholder="Endereço">
+                      <input required type="text" class="form-control" id="inputEndereco" placeholder="Endereço"required>
                   </div>
                   <div class="form-group col-sm-2">
                       <label for="<inputNumero">Número</label>
-                      <input type="text" class="form-control" id="inputNumero" placeholder="Número">
+                      <input required type="text" class="form-control" id="inputNumero" placeholder="Número"required>
                   </div>
                   <div class="form-group col-sm-5">
                       <label for="<inputBairro">Bairro</label>
-                      <input type="text" class="form-control" id="inputBairro" placeholder="Bairro">
+                      <input required type="text" class="form-control" id="inputBairro" placeholder="Bairro"required>
                   </div>
                   <div class="form-group col-sm-6">
                       <label for="<inputCidade">Cidade</label>
-                      <input type="text" class="form-control" id="inputCidade" placeholder="Cidade">
+                      <input required type="text" class="form-control" id="inputCidade" placeholder="Cidade"required>
                   </div>
-                  <div class="form-group col-sm-6">
+                  <div class="form-group col-sm-3">
                       <label for="<inputEstado">Estado</label>
                       <select id="inputEstado" class="form-control">
                         <option  selected>Escolha...</option>
@@ -136,15 +153,25 @@
                         <option value="">...</option>
                       </select>
                   </div>
+                  <div class="form-group col-sm-3">
+                      <label for="<inputPais">Pais</label>
+                      <select id="inputPais" class="form-control">
+                        <option  selected>Escolha...</option>
+                        <option value="">...</option>
+                        <option value="">...</option>
+                        <option value="">...</option>
+                      </select>
+                  </div>
+
               </div>
               <div class="form-row">
                   <div class="form-group col-sm-5">
                       <label for="<inputEmail">E-mail</label>
-                      <input type="text" class="form-control" id="inputEmail" placeholder="E-mail">
+                      <input type="text" class="form-control" id="inputEmail" placeholder="E-mail"required>
                   </div>
                   <div class="form-group col-sm-3">
                       <label for="<inputFone">Telefone</label>
-                      <input type="text" class="form-control" id="inputFone" placeholder="Telefone">
+                      <input  type="text" class="form-control" id="inputFone" placeholder="Telefone"required>
                   </div>
                   <div class="form-group col-sm-4">
                       <label for="<inputSegmento">Segmento</label>

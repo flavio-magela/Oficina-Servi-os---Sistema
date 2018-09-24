@@ -1,4 +1,4 @@
-Intalação do Bootstrap 4 NPM e Sass
+﻿Intalação do Bootstrap 4 NPM e Sass
  Videos mostrando como instalar: C:\Users\Flavio Magela\Videos\Web
 
 - Instalar o node-v8.12.0-x64.msi;
@@ -7,4 +7,21 @@ Intalação do Bootstrap 4 NPM e Sass
 - Instalar o Sass via NPM:
 	- E:\Projetos\Oficina>npm install -g sass
 	- E:\Projetos\Oficina>npm install -g choco sass
+	
+- Criar uma pagina html (index.html) e adicionar o código da página web que está no bootstrap (Getting Started/introduction)
+copiar o código que está no "Starter Template" e fazer as alterações necessárias 
+apontando para as pastas do bootstrap criada no E:\Projetos\Oficina> 
+
+
+
+
+
+- Agora trabalhar com botstrap normalmente
  
+
+Trabalhar com o SASS para compilar os arquivos do bootstrap
+sass --watch node_modules/bootstrap/scss:node_modules\bootstrap\compiler node_modules\bootstrap\scss:scss
+OU
+sass --watch node_modules/bootstrap/scss:node_modules\bootstrap\compiler
+sass --watch node_modules/bootstrap/scss:css   - compilar nas pasta que vc deseja
+sass --watch node_modules/bootstrap/scss:style

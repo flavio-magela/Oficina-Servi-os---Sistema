@@ -79,30 +79,39 @@
       <!-- Navar Menu Clientes -->
       <nav class="navbar navbar-light navbar-light" style="background-color: #A4A4A4;">
           <a class="navbar-brand titulo" href="#"><i class="fas fa-users titulo mr-2"></i>Clientes</a>
-          <button class="btn btn-LightGrey ml-auto " type="Submit"><i class="fas fa-user-plus"></i></button>
-          <button class="btn btn-LightGrey ml-auto " type="Submit"><i class="fas fa-save"></i></button>
-          <button class="btn btn-LightGrey ml-auto " type="Submit"><i class="fas fa-trash-alt"></i></button>
-          <button class="btn btn-LightGrey ml-auto " type="Submit"><i class="fas fa-undo-alt"></i></button>
-          <button class="btn btn-LightGrey ml-auto " type="Submit"><i class="fas fa-backward"></i></button>
-          <button class="btn btn-LightGrey ml-auto " type="Submit"><i class="fas fa-forward"></i></button>
-          <button class="btn btn-LightGrey ml-auto " type="Submit"><i class="fas fa-search"></i></button>
-          <button class="btn btn-LightGrey ml-auto " type="Submit"><i class="fas fa-times"></i></button>
+          <button tabindex="0" class=" btn btn-info ml-auto "data-toggle="popover"  data-placement="right" data-trigger="focus" title="Novo" type="Submit"><i class="fas fa-user-plus"></i></button>
+
+          <button tabindex="0" class=" btn btn-info ml-auto "data-toggle="popover"  data-placement="right" data-trigger="focus" title="Salvar" type="Submit"><i class="fas fa-save"></i></button>
+
+          <button tabindex="0" class=" btn btn-info ml-auto "data-toggle="popover"  data-placement="right" data-trigger="focus" title="Excluir" type="Submit"><i class="fas fa-trash-alt"></i></button>
+
+          <button tabindex="0" class=" btn btn-info ml-auto "data-toggle="popover"  data-placement="right" data-trigger="focus" title="Limpar" type="Submit"><i class="fas fa-undo-alt"></i></button>
+
+          <button tabindex="0" class=" btn btn-info ml-auto "data-toggle="popover"  data-placement="right" data-trigger="focus" title="Anterior" type="Submit"><i class="fas fa-backward"></i></button>
+
+          <button tabindex="0" class=" btn btn-info ml-auto "data-toggle="popover"  data-placement="right" data-trigger="focus" title="Próximo" type="Submit"><i class="fas fa-forward"></i></button>
+
+          <button tabindex="0" class=" btn btn-info ml-auto "data-toggle="popover"  data-placement="right" data-trigger="focus" title="Localizar" type="Submit"><i class="fas fa-search"></i></button>
+
+          <button tabindex="0" class=" btn btn-info ml-auto "data-toggle="popover"  data-placement="right" data-trigger="focus" title="Imprimir" type="Submit"><i class="fas fa-print"></i></button>
+
+          <button tabindex="0" class=" btn btn-info ml-auto "data-toggle="popover"  data-placement="right" data-trigger="focus" title="Sair" type="Submit"><i class="fas fa-times"></i></button>
       </nav>
       <div class="row justify-content-center mb-5">
-        <div class="col-sm-12 col-md-10 col-lg-8">
-          <form >
+        <div class="col-sm-12 col-md-10 col-lg-8"><br>
+          <form  ><br>
               <div class="form-row">
                     <div class="form-group col-sm-2">
                         <label for="<inputCodigo">Código</label>
                         <input type="text" class="form-control" id="inputCodigo" placeholder="Código">
                     </div>
                     <div class="form-group col-sm-5">
-                        <label for="<inputCliente">Cliente</label>
-                        <input type="text" class="form-control" id="inputCliente" placeholder="Cliente">
+                        <label for="<inputCliente">Cliente / Empresa</label>
+                        <input type="text" class="form-control" id="inputCliente" placeholder="Cliente / Empresa">
                     </div>
                     <div class="form-group col-sm-2">
-                        <label for="<inputRepres">Representante</label>
-                        <input type="text" class="form-control" id="inputRepres" placeholder="Identidade">
+                        <label for="<inputResp">Responsável</label>
+                        <input type="text" class="form-control" id="inputResp" placeholder="Responsável">
                     </div>
                     <div class="form-group col-sm-3">
                         <label for="<inputCpf-Cnpj">CPF / CNPJ</label>
@@ -126,9 +135,18 @@
                       <label for="<inputCidade">Cidade</label>
                       <input type="text" class="form-control" id="inputCidade" placeholder="Cidade">
                   </div>
-                  <div class="form-group col-sm-6">
+                  <div class="form-group col-sm-3">
                       <label for="<inputEstado">Estado</label>
                       <select id="inputEstado" class="form-control">
+                        <option  selected>Escolha...</option>
+                        <option value="">...</option>
+                        <option value="">...</option>
+                        <option value="">...</option>
+                      </select>
+                  </div>
+                  <div class="form-group col-sm-3">
+                      <label for="<inputPais">Pais</label>
+                      <select id="inputPais" class="form-control">
                         <option  selected>Escolha...</option>
                         <option value="">...</option>
                         <option value="">...</option>
@@ -172,6 +190,15 @@
   <script src="node_modules/jquery/dist/jquery.js"></script>
   <script src="node_modules/popper.js/dist/popper.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+  <script type="text/javascript">
+    $(function (){
+
+        $('[data-toggle="popover"]').popover
+
+    })
+
+  </script>
 
 </body>
 
