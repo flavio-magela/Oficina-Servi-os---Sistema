@@ -10,13 +10,13 @@ body{
   color: red;
   size:7x;
   text-align: center;
-  font-size: 20px;
+  font-size: 23px;
 
 }
 .titulo2{
   color: darkred;
   text-align: center;
-  font-size: 16px;
+  font-size: 18px;
   font-family: monospace,sans-serif;
 
 }
@@ -85,6 +85,9 @@ body{
   max-height:35px;
   width: auto;
   height: auto;
+}
+.center{
+  text-align: center;;
 }
 /* footer {
   background-color: black;
