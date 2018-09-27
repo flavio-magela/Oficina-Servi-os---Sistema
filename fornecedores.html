@@ -108,11 +108,12 @@
        <!-- Formulário Fornecedor -->
       <div class="row justify-content-center mb-5">
         <div class="col-sm-12 col-md-10 col-lg-8 "><br>
-          <form action="php/insere_BDFornecedor.php" method="post"><br>
+          <form class="form" onsubmit="negociacaoController.adiciona(event)"action="conexao/BD_Fornecedor.php" method="post"></br>
+
               <div class="form-row">
                     <div class="form-group col-sm-1">
                         <label for="<inputCodigoForn">Código</label>
-                        <input type="text" class="form-control" name="inputCodigoForn" id="inputCodigoForn" placeholder="Código">
+                        <input type="number" class="form-control" name="inputCodigoForn" id="inputCodigoForn" placeholder="Código">
                     </div>
                     <div class="form-group col-sm-5">
                         <label for="<inputFornecedor">Fornecedor</label>
@@ -135,7 +136,7 @@
                   </div>
                   <div class="form-group col-sm-2">
                       <label for="<inputNumeroForn">Número</label>
-                      <input required type="text" class="form-control" name="inputNumeroForn" id="inputNumeroForn" placeholder="Número"required>
+                      <input required type="number" class="form-control" name="inputNumeroForn" id="inputNumeroForn" placeholder="Número"required>
                   </div>
                   <div class="form-group col-sm-5">
                       <label for="<inputBairroForn">Bairro</label>
@@ -188,12 +189,37 @@
       </div>
       <!-- <section class="tabela center" > -->
         <!-- <a class="tooltip btn-floating btn-large waves-effect waves-light yellow" id="botao-sync" title="Sincronizado com Sucesso!"> -->
-        <div class=" tabela center">
+        <div class="  center">
         <h5 class="far fa-handshake titulo ">Tabela de Fornecedores</h5><br>
-          <table class="  centered bordered"><br>
+        <table class="table table-hover table-bordered"><br>
+        <thead>
+            <tr>
+              <th class=" titulo2">Código</th>
+              <th class=" titulo2">Fornecedor</th>
+              <th class=" titulo2">Responsável</th>
+              <th class="titulo2">CNPJ</th>
+              <th class="titulo2">Endereço</th>
+              <th class="titulo2">Número</th>
+              <th class="titulo2">Bairro</th>
+              <th class="titulo2">Cidade</th>
+              <th class="titulo2">País</th>
+              <th class="titulo2">E-mail</th>
+              <th class="titulo2">Telefone</th>
+              <th class="titulo2">Segmento</th>
+              <th class="titulo2">Remover</th>
+            </tr>
+        </thead>
+
+        <tbody>
+        </tbody>
+
+        <tfoot>
+        </tfoot>
+    </table>
+          <!-- <table class=" tabela centered bordered"><br>
                 <thead>
                   <tr>
-                      <th class="far titulo2 mr-2">Código</th>
+                      <th class="far titulo2 ml-3 mr-2">Código</th>
                       <th class="far titulo2 mr-2">Fornecedor</th>
                       <th class="far titulo2 mr-2">Responsável</th>
                       <th class="far titulo2 mr-2">CNPJ</th>
@@ -208,23 +234,23 @@
                       <th class="far titulo2 mr-2">Remover</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody class= " far  ">
 
                 </tbody>
-          </table>
+          </table> -->
         </div>
   </section>
 
-  <!-- <script  src="slick/slick.min.js"></script>
-  <script  src="slick/slick.js"></script>
-  <script  src="js/slider.js"></script> -->
 
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
   <script src="node_modules/jquery/dist/jquery.js"></script>
   <script src="node_modules/popper.js/dist/umd/popper.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
-  <script src="js/tabela.js"></script>
+  <!-- <script src="js/tabela.js"></script> -->
+  <script src="js/fornecedor.js"></script>
 
 </body>
 
