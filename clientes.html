@@ -1,6 +1,6 @@
 <?php
 
-?>s
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -14,33 +14,27 @@
       <link rel="stylesheet" type="text/css" href="css/reset.css">
       <!--Import fontawesome.css-->
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-      <!-- <link rel="stylesheet" type="text/css" href="fontawesome-free-5.3.1-web/css/fontawesome.min.css"> -->
-      <!--Import materialize.css-->
-    <!-- <link rel="stylesheet" type="text/css" href="materialize-v1.0.0-rc.2/materialize/css/materialize.min.css"> -->
+
     <!-- Import Google Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/libs/google-fonts.css" rel="stylesheet">
     <!-- Import tooltipster  Icons -->
     <link rel="stylesheet" href="css/libs/tooltipster.bundle.mim.css">
-    <!-- Import slick  Icons -->
-    <!-- <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/> -->
 
     <link  rel="stylesheet" href="css/index.css" >
     <link  rel="stylesheet" href="node_modules/bootstrap/compile/style.css">
 </head>
 <body>
   <section >
-    <!--   <div class="contato">
-           <div class="gem-contacts-item gem-contacts-phone">
-          <i class="far fa-phone-volume"></i> +55 (31) 3024 1600 | 222
-          <!-- </div>
-          <a class="far fa-phone"></a>
-      </div>-->
-      <div>
+          <div>
+            <!-- Nav bar Menu principal -->
             <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
               <div class="container ">
-                <a class="navbar-brand h2 mb-0" href="#">Menu</a>
+                <div>
+                  <h1 class=" font-weight-bold titulo mr-5"><i class="fas fa-wrench"></i> Oficina RA Stop Gol</h1>
+                </div><br>
+                <a class="navbar-brand h2 mb-0 ml-5" href="#">Menu</a><br>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -56,11 +50,9 @@
                         <a class="nav-link" href="funcionarios.html">Funcionários</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="fornecedores.html">Forncecedores</a>
+                        <a class="nav-link mr-2" href="Fornecedores.html">Fornecedores</a>
                       </li>
-                      <div class= "ml-4 mr-4">
-                        <h1 class=" font-weight-bold titulo"><i class="fas fa-wrench"></i> Oficina RA Stop Gol</h1>
-                    </div>
+
                     </ul>
                     <ul class="navbar-nav ml-auto">
                       <li class="nav-item dropdown">
@@ -79,132 +71,159 @@
               </div>
             </nav>
       </div>
+
       <!-- Navar Menu Clientes -->
       <nav class="navbar navbar-light navbar-light" style="background-color: #A4A4A4;">
           <a class="navbar-brand titulo" href="#"><i class="fas fa-users titulo mr-2"></i>Clientes</a>
-          <button tabindex="0" class=" btn btn-info ml-auto "data-toggle="popover"  data-placement="right" data-trigger="focus" title="Novo" type="Submit"><i class="fas fa-user-plus"></i></button>
 
-          <button tabindex="0" class=" btn btn-info ml-auto "data-toggle="popover"  data-placement="right" data-trigger="focus" title="Salvar" type="Submit"><i class="fas fa-save"></i></button>
+          <button tabindex="0" class=" btn btn-info ml-auto "data-toggle="popover"  data-placement="right" data-trigger="focus" title="Novo" type="Submit" id="btn-novo"><i class="fas fa-user-plus"></i></button>
 
-          <button tabindex="0" class=" btn btn-info ml-auto "data-toggle="popover"  data-placement="right" data-trigger="focus" title="Excluir" type="Submit"><i class="fas fa-trash-alt"></i></button>
+          <button tabindex="0" class=" btn btn-info ml-auto "data-toggle="popover"  data-placement="right" data-trigger="focus" title="Salvar" type="Submit" id="btn-salvar"><i class="fas fa-save"></i></button>
 
-          <button tabindex="0" class=" btn btn-info ml-auto "data-toggle="popover"  data-placement="right" data-trigger="focus" title="Limpar" type="Submit"><i class="fas fa-undo-alt"></i></button>
+          <button tabindex="0" class=" btn btn-info ml-auto "data-toggle="popover"  data-placement="right" data-trigger="focus" title="Excluir" type="Submit" id="btn-excluir"><i class="fas fa-trash-alt"></i></button>
 
-          <button tabindex="0" class=" btn btn-info ml-auto "data-toggle="popover"  data-placement="right" data-trigger="focus" title="Anterior" type="Submit"><i class="fas fa-backward"></i></button>
+          <button tabindex="0" class=" btn btn-info ml-auto "data-toggle="popover"  data-placement="right" data-trigger="focus" title="Limpar" type="Submit" id="btn-limpar"><i class="fas fa-undo-alt"></i></button>
 
-          <button tabindex="0" class=" btn btn-info ml-auto "data-toggle="popover"  data-placement="right" data-trigger="focus" title="Próximo" type="Submit"><i class="fas fa-forward"></i></button>
+          <button tabindex="0" class=" btn btn-info ml-auto "data-toggle="popover"  data-placement="right" data-trigger="focus" title="Anterior" type="Submit" id="btn-voltar"><i class="fas fa-backward"></i></button>
 
-          <button tabindex="0" class=" btn btn-info ml-auto "data-toggle="popover"  data-placement="right" data-trigger="focus" title="Localizar" type="Submit"><i class="fas fa-search"></i></button>
+          <button tabindex="0" class=" btn btn-info ml-auto "data-toggle="popover"  data-placement="right" data-trigger="focus" title="Próximo" type="Submit" id="btn-avancar"><i class="fas fa-forward"></i></button>
 
-          <button tabindex="0" class=" btn btn-info ml-auto "data-toggle="popover"  data-placement="right" data-trigger="focus" title="Imprimir" type="Submit"><i class="fas fa-print"></i></button>
+          <button tabindex="0" class=" btn btn-info ml-auto "data-toggle="popover"  data-placement="right" data-trigger="focus" title="Localizar" type="Submit" id="btn-localizar"><i class="fas fa-search"></i></button>
 
-          <button tabindex="0" class=" btn btn-info ml-auto "data-toggle="popover"  data-placement="right" data-trigger="focus" title="Sair" type="Submit"><i class="fas fa-times"></i></button>
+          <button tabindex="0" class=" btn btn-info ml-auto "data-toggle="popover"  data-placement="right" data-trigger="focus" title="Imprimir" type="Submit" id="btn-imprimir"><i class="fas fa-print"></i></button>
+
+          <button tabindex="0" class=" btn btn-info ml-auto "data-toggle="popover"  data-placement="right" data-trigger="focus" title="Sair" type="Submit" id="btn-sair"><i class="fas fa-times"></i></button>
+
       </nav>
+       <!-- Formulário Clientes -->
       <div class="row justify-content-center mb-5">
-        <div class="col-sm-12 col-md-10 col-lg-8"><br>
-          <form  ><br>
+        <div class="col-sm-12 col-md-10 col-lg-8 "><br>
+          <form class="form" onsubmit="negociacaoCliente.adiciona(event)"action="" method="post"></br>       <!-- action="conexao/BD_Cliecedor.php" -->
+
               <div class="form-row">
-                    <div class="form-group col-sm-2">
-                        <label for="<inputCodigo">Código</label>
-                        <input type="text" class="form-control" id="inputCodigo" placeholder="Código">
+                    <div class="form-group col-sm-1">
+                        <label for="<inputCodigoCli">Código</label>
+                        <input type="number" class="form-control" name="inputCodigoCli" id="inputCodigoCli" placeholder="Código" min="00001" step="00001" autofocus>
                     </div>
                     <div class="form-group col-sm-5">
-                        <label for="<inputCliente">Cliente / Empresa</label>
-                        <input type="text" class="form-control" id="inputCliente" placeholder="Cliente / Empresa">
-                    </div>
-                    <div class="form-group col-sm-2">
-                        <label for="<inputResp">Responsável</label>
-                        <input type="text" class="form-control" id="inputResp" placeholder="Responsável">
+                        <label for="<inputCliente">Cliente</label>
+                        <input type="text" class="form-control" name="inputCliente" id="inputCliente" placeholder="Nome do Cliecedor"required>
                     </div>
                     <div class="form-group col-sm-3">
-                        <label for="<inputCpf-Cnpj">CPF / CNPJ</label>
-                        <input type="text" class="form-control" id="inputCpf-Cnpj" placeholder="CPF / CNPJ">
+                        <label for="<inputRespCli">Responsável</label>
+                        <input  type="text" class="form-control" name="inputRespCli" id="inputRespCli" placeholder="Responsável"required>
                     </div>
+                    <div class="form-group col-sm-3">
+                        <label for="<inputCnpjCli">CPF / CNPJ</label>
+                        <input  type="text" class="form-control" name="inputCnpjCli" id="inputCnpjCli" placeholder="CNPJ"required>
+                    </div>
+
               </div>
               <div class="form-row">
                   <div class="form-group col-sm-5">
-                      <label for="<inputEndereco">Endereço</label>
-                      <input type="text" class="form-control" id="inputEndereco" placeholder="Endereço">
+                      <label for="<inputEnderecoCli">Endereço</label>
+                      <input required type="text" class="form-control" name="inputEnderecoCli" id="inputEnderecoCli" placeholder="Endereço"required>
                   </div>
                   <div class="form-group col-sm-2">
-                      <label for="<inputNumero">Número</label>
-                      <input type="text" class="form-control" id="inputNumero" placeholder="Número">
+                      <label for="<inputNumeroCli">Número</label>
+                      <input required type="number" class="form-control" name="inputNumeroCli" id="inputNumeroCli" placeholder="Número"required>
                   </div>
                   <div class="form-group col-sm-5">
-                      <label for="<inputBairro">Bairro</label>
-                      <input type="text" class="form-control" id="inputBairro" placeholder="Bairro">
+                      <label for="<inputBairroCli">Bairro</label>
+                      <input required type="text" class="form-control" name="inputBairroCli" id="inputBairroCli" placeholder="Bairro"required>
                   </div>
                   <div class="form-group col-sm-6">
-                      <label for="<inputCidade">Cidade</label>
-                      <input type="text" class="form-control" id="inputCidade" placeholder="Cidade">
+                      <label for="<inputCidadeCli">Cidade</label>
+                      <input required type="text" class="form-control" name="inputCidadeCli" id="inputCidadeCli" placeholder="Cidade"required>
                   </div>
                   <div class="form-group col-sm-3">
                       <label for="<inputEstado">Estado</label>
-                      <select id="inputEstado" class="form-control">
+                      <select name="inputEstadoCli" id="inputEstadoCli" class="form-control">
                         <option  selected>Escolha...</option>
-                        <option value="">...</option>
-                        <option value="">...</option>
-                        <option value="">...</option>
+                        <option value="MG">MG</option>
+                        <option value="RJ">RJ</option>
+                        <option value="SP">SP</option>
                       </select>
                   </div>
                   <div class="form-group col-sm-3">
-                      <label for="<inputPais">Pais</label>
-                      <select id="inputPais" class="form-control">
+                      <label for="<inputPaisCli">Pais</label>
+                      <select name="inputPaisCli" id="inputPaisCli" class="form-control">
                         <option  selected>Escolha...</option>
-                        <option value="">...</option>
-                        <option value="">...</option>
-                        <option value="">...</option>
+                        <option value="Brasil">Brasil</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="USA">USA</option>
                       </select>
                   </div>
+
               </div>
               <div class="form-row">
                   <div class="form-group col-sm-5">
-                      <label for="<inputEmail">E-mail</label>
-                      <input type="text" class="form-control" id="inputEmail" placeholder="E-mail">
+                      <label for="<inputEmailCli">E-mail</label>
+                      <input type="text" class="form-control" name="inputEmailCli" id="inputEmailCli" placeholder="E-mail"required>
                   </div>
                   <div class="form-group col-sm-3">
-                      <label for="<inputFone">Telefone</label>
-                      <input type="text" class="form-control" id="inputFone" placeholder="Telefone">
+                      <label for="<inputFoneCli">Telefone</label>
+                      <input  type="text" class="form-control" name="inputFoneCli" id="inputFoneCli" placeholder="Telefone"required>
                   </div>
                   <div class="form-group col-sm-4">
-                      <label for="<inputSegmento">Segmento</label>
-                      <input type="text" class="form-control" id="inputSegmento" placeholder="Segmento">
+                      <label for="<inputSegmentoCli">Segmento</label>
+                      <input type="text" class="form-control" name="inputSegmentoCli" id="inputSegmentoCli" placeholder="Segmento">
+                  </div>
+                  <div class="form-group col-sm-2">
+                      <input class=" btn btn-info ml-auto " type="submit" class="form-control" value="Salvar" >
                   </div>
               </div>
           </form>
         </div>
 
       </div>
-      <ul class="list-group list-group-flush">
-          <li class="list-group-item">Cras justo odio</li>
-          <li class="list-group-item">Dapibus ac facilisis in</li>
-          <li class="list-group-item">Morbi leo risus</li>
-          <li class="list-group-item">Porta ac consectetur ac</li>
-          <li class="list-group-item">Vestibulum at eros</li>
-      </ul>
+      <!-- <section class="tabela center" > -->
+        <!-- <a class="tooltip btn-floating btn-large waves-effect waves-light yellow" id="botao-sync" title="Sincronizado com Sucesso!"> -->
+        <div class="  center">
+        <h5 class="fas fa-users titulo mr-2 ">Tabela de Clientes</h5><br>
+        <table class="table table-hover table-bordered"><br>
+        <thead>
+            <tr>
+              <th class=" titulo2">Código</th>
+              <th class=" titulo2">Cliente</th>
+              <th class=" titulo2">Responsável</th>
+              <th class="titulo2">CPF/CNPJ</th>
+              <th class="titulo2">Endereço</th>
+              <th class="titulo2">Número</th>
+              <th class="titulo2">Bairro</th>
+              <th class="titulo2">Cidade</th>
+              <th class="titulo2">Estado</th>
+              <th class="titulo2">País</th>
+              <th class="titulo2">E-mail</th>
+              <th class="titulo2">Telefone</th>
+              <th class="titulo2">Segmento</th>
+              <th class="titulo2 botao-remover " >Remover</th>
+            </tr>
+        </thead>
 
-  </section>
+        <tbody>
+        </tbody>
 
-  <!-- <script  src="slick/slick.min.js"></script>
-  <script  src="slick/slick.js"></script>
-  <script  src="js/slider.js"></script> -->
+        <tfoot>
+        </tfoot>
+      </table>
 
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="node_modules/jquery/dist/jquery.js"></script>
-  <script src="node_modules/popper.js/dist/popper.js"></script>
-  <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
-  <script src="js/tabela.js"></script>
+      </section>
 
-  <script type="text/javascript">
-    $(function (){
+      <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+      <script src="node_modules/jquery/dist/jquery.js"></script>
+      <script src="node_modules/popper.js/dist/umd/popper.js"></script>
+      <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+      <!-- <script src="js/tabela.js"></script> -->
+      <script src="js/cliente.js"></script>
+      <script src="js/NegociacaoCliente.js"></script>
+      <script >
+      let negociacaoCliente = new NegociacaoCliente();
+      </script>
 
-        $('[data-toggle="popover"]').popover
+      </body>
 
-    })
-
-  </script>
-
-</body>
-
-</html>
+      </html>

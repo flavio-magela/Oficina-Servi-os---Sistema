@@ -6,7 +6,7 @@ $("#btn-salvar").click(mostraTabela);
 function insereTabela(){
   var corpoTabela = $(".tabela").find("tbody");
 
-  var codigo = $("#inputCodigoForn").text(); // insere o tabela da funçao selectize
+  var codigo = document.getElementBy("#inputCodigoForn").text(); // insere o tabela da funçao selectize
   console.log(codigo);
   var fornecedor = $("#inputFornecedor").val();
   console.log(fornecedor);

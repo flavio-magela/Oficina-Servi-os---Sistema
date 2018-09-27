@@ -14,30 +14,19 @@
       <link rel="stylesheet" type="text/css" href="css/reset.css">
       <!--Import fontawesome.css-->
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-      <!-- <link rel="stylesheet" type="text/css" href="fontawesome-free-5.3.1-web/css/fontawesome.min.css"> -->
-      <!--Import materialize.css-->
-    <!-- <link rel="stylesheet" type="text/css" href="materialize-v1.0.0-rc.2/materialize/css/materialize.min.css"> -->
+
     <!-- Import Google Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/libs/google-fonts.css" rel="stylesheet">
     <!-- Import tooltipster  Icons -->
     <link rel="stylesheet" href="css/libs/tooltipster.bundle.mim.css">
-    <!-- Import slick  Icons -->
-    <!-- <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/> -->
 
     <link  rel="stylesheet" href="css/index.css" >
     <link  rel="stylesheet" href="node_modules/bootstrap/compile/style.css">
 </head>
 <body>
   <section >
-    <!--   <div class="contato">
-           <div class="gem-contacts-item gem-contacts-phone">
-          <i class="far fa-phone-volume"></i> +55 (31) 3024 1600 | 222
-          <!-- </div>
-          <a class="far fa-phone"></a>
-      </div>-->
-      <div>
+          <div>
             <!-- Nav bar Menu principal -->
             <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 
@@ -61,7 +50,7 @@
                         <a class="nav-link" href="funcionarios.html">Funcionários</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link mr-2" href="fornecedores.html">Forncecedores</a>
+                        <a class="nav-link mr-2" href="fornecedores.html">Fornecedores</a>
                       </li>
 
                     </ul>
@@ -108,16 +97,16 @@
        <!-- Formulário Fornecedor -->
       <div class="row justify-content-center mb-5">
         <div class="col-sm-12 col-md-10 col-lg-8 "><br>
-          <form class="form" onsubmit="negociacaoController.adiciona(event)"action="conexao/BD_Fornecedor.php" method="post"></br>
+          <form class="form" onsubmit="negociacaoFornecedor.adiciona(event)"action="" method="post"></br>       <!-- action="conexao/BD_Fornecedor.php" -->
 
               <div class="form-row">
                     <div class="form-group col-sm-1">
                         <label for="<inputCodigoForn">Código</label>
-                        <input type="number" class="form-control" name="inputCodigoForn" id="inputCodigoForn" placeholder="Código">
+                        <input type="number" class="form-control" name="inputCodigoForn" id="inputCodigoForn" placeholder="Código" min="00001" step="00001" autofocus>
                     </div>
                     <div class="form-group col-sm-5">
                         <label for="<inputFornecedor">Fornecedor</label>
-                        <input type="text" class="form-control" name="inputFornecedor" id="inputFornecedor" placeholder="Fornecedor"required>
+                        <input type="text" class="form-control" name="inputFornecedor" id="inputFornecedor" placeholder="Nome do Fornecedor"required>
                     </div>
                     <div class="form-group col-sm-3">
                         <label for="<inputRespForn">Responsável</label>
@@ -150,18 +139,18 @@
                       <label for="<inputEstado">Estado</label>
                       <select name="inputEstadoForn" id="inputEstadoForn" class="form-control">
                         <option  selected>Escolha...</option>
-                        <option value="">MG</option>
-                        <option value="">RJ</option>
-                        <option value="">SP</option>
+                        <option value="MG">MG</option>
+                        <option value="RJ">RJ</option>
+                        <option value="SP">SP</option>
                       </select>
                   </div>
                   <div class="form-group col-sm-3">
                       <label for="<inputPaisForn">Pais</label>
                       <select name="inputPaisForn" id="inputPaisForn" class="form-control">
                         <option  selected>Escolha...</option>
-                        <option value="">Brasil</option>
-                        <option value="">Argentina</option>
-                        <option value="">USA</option>
+                        <option value="Brasil">Brasil</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="USA">USA</option>
                       </select>
                   </div>
 
@@ -202,11 +191,12 @@
               <th class="titulo2">Número</th>
               <th class="titulo2">Bairro</th>
               <th class="titulo2">Cidade</th>
+              <th class="titulo2">Estado</th>
               <th class="titulo2">País</th>
               <th class="titulo2">E-mail</th>
               <th class="titulo2">Telefone</th>
               <th class="titulo2">Segmento</th>
-              <th class="titulo2">Remover</th>
+              <th class="titulo2 botao-remover " >Remover</th>
             </tr>
         </thead>
 
@@ -216,31 +206,8 @@
         <tfoot>
         </tfoot>
     </table>
-          <!-- <table class=" tabela centered bordered"><br>
-                <thead>
-                  <tr>
-                      <th class="far titulo2 ml-3 mr-2">Código</th>
-                      <th class="far titulo2 mr-2">Fornecedor</th>
-                      <th class="far titulo2 mr-2">Responsável</th>
-                      <th class="far titulo2 mr-2">CNPJ</th>
-                      <th class="far titulo2 mr-2">Endereço</th>
-                      <th class="far titulo2 mr-2">Número</th>
-                      <th class="far titulo2 mr-2">Bairro</th>
-                      <th class="far titulo2 mr-2">Cidade</th>
-                      <th class="far titulo2 mr-2">País</th>
-                      <th class="far titulo2 mr-2">E-mail</th>
-                      <th class="far titulo2 mr-2">Telefone</th>
-                      <th class="far titulo2 mr-2">Segmento</th>
-                      <th class="far titulo2 mr-2">Remover</th>
-                  </tr>
-                </thead>
-                <tbody class= " far  ">
 
-                </tbody>
-          </table> -->
-        </div>
   </section>
-
 
   <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -251,6 +218,10 @@
   <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
   <!-- <script src="js/tabela.js"></script> -->
   <script src="js/fornecedor.js"></script>
+  <script src="js/NegociacaoFornecedor.js"></script>
+  <script >
+      let negociacaoFornecedor = new NegociacaoFornecedor();
+  </script>
 
 </body>
 
