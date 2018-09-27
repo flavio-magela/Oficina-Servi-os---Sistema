@@ -3,7 +3,7 @@
 	$servidor = "localhost";
 	$usuario = "root";
 	$senha = "";
-	$dbname = "contato";
+	$dbname = "ra_oficina";
 
 	//Criar a conexão
 	$con = mysql_connect($servidor, $usuario, $senha);
