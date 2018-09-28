@@ -17,6 +17,7 @@ class NegociacaoFornecedor {
         this._Telefone = telefone;
         this._Segmento = segmento;
 
+        
         Object.freeze(this);
     }
 
