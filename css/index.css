@@ -1,6 +1,6 @@
 
 body{
-  background-color: LightGrey;
+  background-color: white;
 }
 .container{
   width: 100%;
@@ -11,6 +11,13 @@ body{
   size:7x;
   text-align: center;
   font-size: 23px;
+
+}
+.btnSalvar{
+  width:255px;
+  height: 255px;
+  background: url(img/patio.jpg) no-repeat;
+  display: bloc;
 
 }
 .titulo2{

@@ -1,4 +1,4 @@
-class NegociacaoFuncionario{
+class ControllerFuncionario{
 
   constructor(){
 
@@ -25,7 +25,25 @@ class NegociacaoFuncionario{
     event.preventDefault();
     alert("Ação realizada com sucesso.");
 
-    //console.log(typeof(this._inputData)); //saber o tipo da variavel (string, number, date, etc..)
+
+
+    // let negociacao = new NegociacaoFuncionario{ Ao rodar a página html acusave erro: Informando (Desconhecido ReferenceError: ControllerFornecedor não está definido) - Foi comentado esses código, após isso funcionou.
+    //
+    //   this._inputCodigo.value,
+    //   this._inputFuncionario.value,
+    //   this._inputIdentidade.value,
+    //   this._inputCpf.value,
+    //   this._inputEndereco.value,
+    //   this._inputNumero.value,
+    //   this._inputBairro.value,
+    //   this._inputCidade.value,
+    //   this._inputEstado.value,
+    //   this._inputPais.value,
+    //   this._inputEmail.value,
+    //   this._inputFone.value,
+    //   this._inputSegmento.value
+    // };
+    // //console.log(typeof(this._inputData)); //saber o tipo da variavel (string, number, date, etc..)
     console.log(this._inputCodigo);
     console.log(this._inputFuncionario);
     console.log(this._inputIdentidade);
@@ -40,22 +58,6 @@ class NegociacaoFuncionario{
     console.log(this._inputFone);
     console.log(this._inputSegmento);
 
-    //   let negociacao = new Negociacao(
-    //   this._inputCodigo.value,
-    //   this._inputFuncecedor.value,
-    //   this._inputResponsavel.value,
-    //   this._inputCnpj.value,
-    //   this._inputEndereco.value,
-    //   this._inputNumero.value,
-    //   this._inputBairro.value,
-    //   this._inputCidade.value,
-    //   this._inputEstado.value,
-    //   this._inputPais.value,
-    //   this._inputEmail.value,
-    //   this._inputFone.value,
-    //   this._inputSegmento.value
-    //
-    // );
 
     // adicionar a negociacao em uma lista
     console.log("Funcionario: " + this._inputFuncionario.value);

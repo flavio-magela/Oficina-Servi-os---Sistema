@@ -1,4 +1,4 @@
-var campos = [
+var campos_forn = [
   document.querySelector('#inputCodigoForn'),
   document.querySelector('#inputFornecedor'),
   document.querySelector('#inputRespForn'),
@@ -18,29 +18,36 @@ var campos = [
 
 var tbody = document.querySelector('table tbody');
 
-document.querySelector('.form').addEventListener('submit', function(event) {
+document.querySelector('form').addEventListener('submit', function(event) {
 
    event.preventDefault();
 
    var tr = document.createElement('tr');
 
-   campos.forEach(function(campo) {
+   campos_forn.forEach(function(campo) {
 
        var td = document.createElement('td');
-       var link = $("<a>").addClass("botao-remover").attr("href","#");
-       var icone = $("<i>").addClass("small").addClass("material-icons").text("delete");
-
-
-       link.append(icone); //colocar o icone dentro da linha como no html
-       td.append(link); // colocar a linha dentro da <td> remove igual no gohtml
-
        td.textContent = campo.value;
-
        tr.appendChild(td);
    });
 
+
   tbody.appendChild(tr);
 
-  campos[0].focus();
+  campos_forn[0].value = 0;
+  campos_forn[1].value = '';
+  campos_forn[2].value = '';
+  campos_forn[3].value = '';
+  campos_forn[4].value = '';
+  campos_forn[5].value = '';
+  campos_forn[6].value = 0;
+  campos_forn[7].value = '';
+  campos_forn[8].value = '';
+  campos_forn[9].value = '';
+  campos_forn[10].value = '';
+  campos_forn[11].value = '';
+  campos_forn[12].value = '';
+
+  campos_forn[0].focus();
 
 });

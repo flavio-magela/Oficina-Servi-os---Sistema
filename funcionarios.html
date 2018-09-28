@@ -29,7 +29,7 @@
 
       <div>
             <!-- Nav bar Menu principal -->
-            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <nav class="navbar navbar-expand-lg navbar-primary bg-light">
 
               <div class="container ">
                 <div>
@@ -72,7 +72,7 @@
               </div>
             </nav>
       </div>
-      <nav class="navbar navbar-light navbar-light" style="background-color: #A4A4A4;">
+      <nav class="navbar navbar-expand-lg navbar-primary bg-light" style="background-color: #A4A4A4;">
           <a class="navbar-brand titulo2" href="#"><i class="fas fa-address-card mr-1 titulo"></i>Funcionário</a>
 
           <button tabindex="0" class=" btn btn-info ml-auto "data-toggle="popover"  data-placement="right" data-trigger="focus" title="Novo" type="Submit" id="btn-novo"><i class="fas fa-user-plus"></i></button>
@@ -97,7 +97,8 @@
       <!-- Navar Menu Funcionários -->
      <div class="row justify-content-center mb-5">
        <div class="col-sm-12 col-md-10 col-lg-8 "><br>
-         <form class="form" onsubmit="negociacaoFuncionario.adiciona(event)"action="" method="post"></br>       <!-- action="conexao/BD_Funcecedor.php" -->
+         <form class="form" onsubmit="controllerFuncionario.adiciona(event)"action="" method="post"></br>
+                 <!-- action="conexao/BD_Funcecedor.php" -->
 
              <div class="form-row">
                    <div class="form-group col-sm-1">
@@ -125,7 +126,7 @@
                  </div>
                  <div class="form-group col-sm-2">
                      <label for="<inputNumeroFunc">Número</label>
-                     <input required type="number" class="form-control" name="inputNumeroFunc" id="inputNumeroFunc" placeholder="Número"required>
+                     <input required type="number" class="form-control" name="inputNumeroFunc" id="inputNumeroFunc" placeholder="Número" min="00" step="00"required>
                  </div>
                  <div class="form-group col-sm-5">
                      <label for="<inputBairroFunc">Bairro</label>
@@ -217,10 +218,11 @@
  <script src="node_modules/popper.js/dist/umd/popper.js"></script>
  <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
  <!-- <script src="js/tabela.js"></script> -->
- <script src="js/funcionario.js"></script>
- <script src="js/NegociacaoFuncionario.js"></script>
+ <script src="js/Forms/funcionario.js"></script>
+ <script src="js/Controller/ControllerFuncionario.js"></script>
+ <script src="js/Models/NegociacaoFuncionario.js"></script>
  <script >
-     let negociacaoFuncionario = new NegociacaoFuncionario();
+     let controllerFuncionario = new ControllerFuncionario();
  </script>
 
 </body>

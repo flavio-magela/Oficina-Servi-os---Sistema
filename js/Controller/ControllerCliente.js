@@ -1,4 +1,4 @@
-class NegociacaoCliente{
+class ControllerCliente{
 
   constructor(){
 
@@ -16,7 +16,7 @@ class NegociacaoCliente{
     this._inputEmail = $('#inputEmailCli');
     this._inputFone = $('#inputFoneCli');
     this._inputSegmento = $('#inputSegmentoCli');
-    this._inputRemover = $('botao-remover');
+    //this._inputRemover = $('botao-remover');
 
   }
 
@@ -26,6 +26,23 @@ class NegociacaoCliente{
     alert("Ação realizada com sucesso.");
 
     //console.log(typeof(this._inputData)); //saber o tipo da variavel (string, number, date, etc..)
+    // let negociacao = new NegociacaoFornecedor{ Ao rodar a página html acusave erro: Informando (Desconhecido ReferenceError: ControllerFornecedor não está definido) - Foi comentado esses código, após isso funcionou.
+    //
+    //     console.log(this._inputCodigo);
+    //     console.log(this._inputCliente);
+    //     console.log(this._inputResponsavel);
+    //     console.log(this._inputCnpj);
+    //     console.log(this._inputEndereco);
+    //     console.log(this._inputNumero);
+    //     console.log(this._inputBairro);
+    //     console.log(this._inputCidade);
+    //     console.log(this._inputEstado);
+    //     console.log(this._inputPais);
+    //     console.log(this._inputEmail);
+    //     console.log(this._inputFone);
+    //     console.log(this._inputSegmento);
+    //
+    // };
     console.log(this._inputCodigo);
     console.log(this._inputCliente);
     console.log(this._inputResponsavel);
@@ -39,7 +56,6 @@ class NegociacaoCliente{
     console.log(this._inputEmail);
     console.log(this._inputFone);
     console.log(this._inputSegmento);
-
 
     // adicionar a negociacao em uma lista
     console.log("Cliente: " + this._inputCliente.value);
