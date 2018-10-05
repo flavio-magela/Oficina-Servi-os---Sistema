@@ -181,38 +181,12 @@
         </div>
 
       </div>
-      <!-- <section class="tabela center" > -->
-        <!-- <a class="tooltip btn-floating btn-large waves-effect waves-light yellow" id="botao-sync" title="Sincronizado com Sucesso!"> -->
+
         <div class=" center">
         <h5 class="far fa-handshake titulo mr-2 ">Tabela de Fornecedores</h5><br>
-        <table class="table table-hover table-bordered"><br>
-        <thead>
-            <tr>
-              <th class=" titulo2">Código</th>
-              <th class=" titulo2">Fornecedor</th>
-              <th class=" titulo2">Responsável</th>
-              <th class="titulo2">CNPJ</th>
-              <th class="titulo2">Endereço</th>
-              <th class="titulo2">Número</th>
-              <th class="titulo2">Bairro</th>
-              <th class="titulo2">Cidade</th>
-              <th class="titulo2">Estado</th>
-              <th class="titulo2">País</th>
-              <th class="titulo2">E-mail</th>
-              <th class="titulo2">Telefone</th>
-              <th class="titulo2">Segmento</th>
-              <!-- <th class="titulo2 botao-remover " >Remover</th> -->
-            </tr>
-        </thead>
+        <div id="negociacoesView">
 
-        <tbody>
-
-        </tbody>
-
-        <tfoot>
-
-        </tfoot>
-    </table>
+        </div>
 
   </section>
 
@@ -223,11 +197,11 @@
   <script src="node_modules/jquery/dist/jquery.js"></script>
   <script src="node_modules/popper.js/dist/umd/popper.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
-  <!-- <script src="js/tabela.js"></script> -->
   <script src="js/Forms/fornecedor.js"></script>
   <script src="js/Controller/ControllerFornecedor.js"></script>
   <script src="js/Models/NegociacaoFornecedor.js"></script>
   <script src="js/Models/ListaNegociacoes_Fornecedor.js"></script>
+  <script src="js/views/NegociacoesView.js"></script>
   <script >
       let controllerFornecedor = new ControllerFornecedor();
   </script>
