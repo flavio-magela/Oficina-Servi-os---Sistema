@@ -34,7 +34,7 @@ class NegociacoesView{
                       ${model.negociacoes.map(n => {
 
                         return `
-                        // uso da tamplate string - para cada objeto vc cria um lista contendo uma tr - linhas e suas td - colunas
+                        <!-- uso da tamplate string - para cada objeto vc cria um lista contendo uma tr - linhas e suas td - colunas-->
                             <tr>
                                 <td>${n.codigo}</td>
                                 <td>${n.fornecedor}</td>
