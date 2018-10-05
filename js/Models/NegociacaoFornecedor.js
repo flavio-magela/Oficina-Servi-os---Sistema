@@ -3,7 +3,7 @@ class NegociacaoFornecedor {
     constructor(codigo, fornecedor, responsavel, cnpj, endereco, numero, bairro, cidade, estado, pais, email, telefone, segmento) {
 
 
-        this._Codigo = codigo; // utilizando o $ como objeto .bind()
+        this._Codigo = codigo; 
         this._Fornecedor = fornecedor;
         this._Responsavel = responsavel; // "_" utilizando a convenção de acessar somente dentro do método controllers.
         this._Cnpj = cnpj;
@@ -17,7 +17,7 @@ class NegociacaoFornecedor {
         this._Telefone = telefone;
         this._Segmento = segmento;
 
-        
+
         Object.freeze(this);
     }
 

@@ -2,7 +2,7 @@ class ListaNegociacoes_Fornecedor{
 
   constructor(){
 
-    this.negociacoes = []
+    this._negociacoes = []
 
   }
 
