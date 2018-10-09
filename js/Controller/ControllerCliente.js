@@ -6,7 +6,7 @@ class ControllerCliente{
     this._inputCodigo = $('#inputCodigoCli'); // utilizando o $ como objeto .bind()
     this._inputCliente = $('#inputCliente');
     this._inputResponsavel = $('#inputRespCli'); // "_" utilizando a convenção de acessar somente dentro do método controllers.
-    this._inputCnpj = $('#inputCnpjCli');
+    this._inputCnpj_Cpf = $('#inputCnpjCli');
     this._inputEndereco = $('#inputEnderecoCli');
     this._inputNumero = $('#inputNumeroCli');
     this._inputBairro = $('#inputBairroCli');
@@ -17,52 +17,61 @@ class ControllerCliente{
     this._inputFone = $('#inputFoneCli');
     this._inputSegmento = $('#inputSegmentoCli');
     //this._inputRemover = $('botao-remover');
+    this._listaNegociacoes = new ListaNegociacoes_Cliente();
+    this._negociacoesView = new NegociacoesView_Cliente($('#negociacoesView')); // será instanciada a tabela html que estna na negociacoesView
+    this._negociacoesView.update(this._listaNegociacoes); // atualiza a tabela no clientees.html e recebe a lista this._listaNegociacoes (new ListaNegociacoes_cliente)
 
-  }
+    }
 
-  adiciona(event){
+    adiciona(event){
 
     event.preventDefault();
+
     alert("Ação realizada com sucesso.");
 
-    //console.log(typeof(this._inputData)); //saber o tipo da variavel (string, number, date, etc..)
-    // let negociacao = new NegociacaoFornecedor{ Ao rodar a página html acusave erro: Informando (Desconhecido ReferenceError: ControllerFornecedor não está definido) - Foi comentado esses código, após isso funcionou.
-    //
-    //     console.log(this._inputCodigo);
-    //     console.log(this._inputCliente);
-    //     console.log(this._inputResponsavel);
-    //     console.log(this._inputCnpj);
-    //     console.log(this._inputEndereco);
-    //     console.log(this._inputNumero);
-    //     console.log(this._inputBairro);
-    //     console.log(this._inputCidade);
-    //     console.log(this._inputEstado);
-    //     console.log(this._inputPais);
-    //     console.log(this._inputEmail);
-    //     console.log(this._inputFone);
-    //     console.log(this._inputSegmento);
-    //
-    // };
-    console.log(this._inputCodigo);
-    console.log(this._inputCliente);
-    console.log(this._inputResponsavel);
-    console.log(this._inputCnpj);
-    console.log(this._inputEndereco);
-    console.log(this._inputNumero);
-    console.log(this._inputBairro);
-    console.log(this._inputCidade);
-    console.log(this._inputEstado);
-    console.log(this._inputPais);
-    console.log(this._inputEmail);
-    console.log(this._inputFone);
-    console.log(this._inputSegmento);
+    this._listaNegociacoes.adiciona(this._criaNegociacao()); //lista encapsulada a negocições
+    this._negociacoesView.update(this._listaNegociacoes); // apos a função adiciona vc faz o update da minha _listaNegociacoes
+    this._limpaFormulario(); //limpa o Formulário
 
-    // adicionar a negociacao em uma lista
-    console.log("Cliente: " + this._inputCliente.value);
-    console.log("Responsavel: " + this._inputResponsavel.value);
-    console.log("CNPJ: " + this._inputCnpj.value);
-    console.log("Estado: " + this._inputEstado.value);
-    console.log("País: " + this._inputPais.value);
-  }
+    console.log( this._listaNegociacoes.negociacoes);
 
-}
+    }
+    _criaNegociacao(){ //metodo auxiliar  cria negociacao
+
+        return new NegociacaoCliente( //cria uma negociação
+          this._inputCodigo.value,
+          this._inputCliente.value,
+          this._inputResponsavel.value,
+          this._inputCnpj_Cpf.value,
+          this._inputEndereco.value,
+          this._inputNumero.value,
+          this._inputBairro.value,
+          this._inputCidade.value,
+          this._inputEstado.value,
+          this._inputPais.value,
+          this._inputEmail.value,
+          this._inputFone.value,
+          this._inputSegmento.value
+        );
+    }
+
+    _limpaFormulario(){  //methodo auxiliar limpa Formulário
+    this._inputCodigo.value =0;
+    this._inputCliente.value ='';
+    this._inputResponsavel.value='';
+    this._inputCnpj_Cpf.value = '';
+    this._inputEndereco.value ='';
+    this._inputNumero.value =0;
+    this._inputBairro.value ='';
+    this._inputCidade.value = '';
+    this._inputEstado.value ='';
+    this._inputPais.value ='';
+    this._inputEmail.value ='';
+    this._inputFone.value ='';
+    this._inputSegmento.value ='';
+
+    this._inputCodigo.focus();
+
+    }
+
+    }

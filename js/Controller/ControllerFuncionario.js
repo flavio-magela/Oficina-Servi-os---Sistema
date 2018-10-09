@@ -15,56 +15,64 @@ class ControllerFuncionario{
     this._inputPais = $('#inputPaisFunc');
     this._inputEmail = $('#inputEmailFunc');
     this._inputFone = $('#inputFoneFunc');
-    this._inputSegmento = $('#inputSegmentoFunc');
-    this._inputRemover = $('botao-remover');
+    this._inputCargo = $('#inputCargoFunc');
+    //this._inputRemover = $('botao-remover');
+
+    this._listaNegociacoes = new ListaNegociacoes_Funcionario();
+    this._negociacoesView = new NegociacoesView_Funcionario($('#negociacoesView')); // será instanciada a tabela html que estna na negociacoesView
+    this._negociacoesView.update(this._listaNegociacoes); // atualiza a tabela no fornecedores.html e recebe a lista this._listaNegociacoes (new ListaNegociacoes_Fornecedor)
 
   }
 
   adiciona(event){
 
     event.preventDefault();
+
     alert("Ação realizada com sucesso.");
 
+    this._listaNegociacoes.adiciona(this._criaNegociacao()); //lista encapsulada a negocições
+    this._negociacoesView.update(this._listaNegociacoes); // apos a função adiciona vc faz o update da minha _listaNegociacoes
+    this._limpaFormulario(); //limpa o Formulário
 
+    console.log( this._listaNegociacoes.negociacoes);
 
-    // let negociacao = new NegociacaoFuncionario{ Ao rodar a página html acusave erro: Informando (Desconhecido ReferenceError: ControllerFornecedor não está definido) - Foi comentado esses código, após isso funcionou.
-    //
-    //   this._inputCodigo.value,
-    //   this._inputFuncionario.value,
-    //   this._inputIdentidade.value,
-    //   this._inputCpf.value,
-    //   this._inputEndereco.value,
-    //   this._inputNumero.value,
-    //   this._inputBairro.value,
-    //   this._inputCidade.value,
-    //   this._inputEstado.value,
-    //   this._inputPais.value,
-    //   this._inputEmail.value,
-    //   this._inputFone.value,
-    //   this._inputSegmento.value
-    // };
-    // //console.log(typeof(this._inputData)); //saber o tipo da variavel (string, number, date, etc..)
-    console.log(this._inputCodigo);
-    console.log(this._inputFuncionario);
-    console.log(this._inputIdentidade);
-    console.log(this._inputCpf);
-    console.log(this._inputEndereco);
-    console.log(this._inputNumero);
-    console.log(this._inputBairro);
-    console.log(this._inputCidade);
-    console.log(this._inputEstado);
-    console.log(this._inputPais);
-    console.log(this._inputEmail);
-    console.log(this._inputFone);
-    console.log(this._inputSegmento);
+  }
+  _criaNegociacao(){ //metodo auxiliar  cria negociacao
 
-
-    // adicionar a negociacao em uma lista
-    console.log("Funcionario: " + this._inputFuncionario.value);
-    console.log("Identidade: " + this._inputIdentidade.value);
-    console.log("CPF: " + this._inputCpf.value);
-    console.log("Estado: " + this._inputEstado.value);
-    console.log("País: " + this._inputPais.value);
+        return new NegociacaoFuncionario( //cria uma negociação
+          this._inputCodigo.value,
+          this._inputFuncionario.value,
+          this._inputIdentidade.value,
+          this._inputCpf.value,
+          this._inputEndereco.value,
+          this._inputNumero.value,
+          this._inputBairro.value,
+          this._inputCidade.value,
+          this._inputEstado.value,
+          this._inputPais.value,
+          this._inputEmail.value,
+          this._inputFone.value,
+          this._inputCargo.value
+        );
   }
 
-}
+  _limpaFormulario(){  //methodo auxiliar limpa Formulário
+    this._inputCodigo.value =0;
+    this._inputFuncionario.value ='';
+    this._inputIdentidade.value=0;
+    this._inputCpf.value = 0;
+    this._inputEndereco.value ='';
+    this._inputNumero.value =0;
+    this._inputBairro.value ='';
+    this._inputCidade.value = '';
+    this._inputEstado.value ='';
+    this._inputPais.value ='';
+    this._inputEmail.value ='';
+    this._inputFone.value ='';
+    this._inputCargo.value ='';
+
+    this._inputCodigo.focus();
+
+  }
+
+  }

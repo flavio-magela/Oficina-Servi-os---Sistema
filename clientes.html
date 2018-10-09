@@ -107,7 +107,7 @@
                     </div>
                     <div class="form-group col-sm-5">
                         <label for="<inputCliente">Cliente</label>
-                        <input type="text" class="form-control" name="inputCliente" id="inputCliente" placeholder="Nome do Cliecedor"required>
+                        <input type="text" class="form-control" name="inputCliente" id="inputCliente" placeholder="Nome do Cliente"required>
                     </div>
                     <div class="form-group col-sm-3">
                         <label for="<inputRespCli">Responsável</label>
@@ -181,32 +181,9 @@
         <!-- <a class="tooltip btn-floating btn-large waves-effect waves-light yellow" id="botao-sync" title="Sincronizado com Sucesso!"> -->
         <div class=" center">
         <h5 class="fas fa-users titulo mr-2 ">Tabela de Clientes</h5><br>
-        <table class="table table-hover table-bordered"><br>
-        <thead>
-            <tr>
-              <th class=" titulo2">Código</th>
-              <th class=" titulo2">Cliente</th>
-              <th class=" titulo2">Responsável</th>
-              <th class="titulo2">CPF/CNPJ</th>
-              <th class="titulo2">Endereço</th>
-              <th class="titulo2">Número</th>
-              <th class="titulo2">Bairro</th>
-              <th class="titulo2">Cidade</th>
-              <th class="titulo2">Estado</th>
-              <th class="titulo2">País</th>
-              <th class="titulo2">E-mail</th>
-              <th class="titulo2">Telefone</th>
-              <th class="titulo2">Segmento</th>
-              <th class="titulo2 botao-remover " >Remover</th>
-            </tr>
-        </thead>
+        <div id="negociacoesView">
 
-        <tbody>
-        </tbody>
-
-        <tfoot>
-        </tfoot>
-      </table>
+        </div>
 
       </section>
 
@@ -221,6 +198,8 @@
       <script src="js/Forms/cliente.js"></script>
       <script src="js/Controller/ControllerCliente.js"></script>
       <script src="js/Models/NegociacaoCliente.js"></script>
+      <script src="js/Models/ListaNegociacoes_Cliente.js"></script>
+      <script src="js/views/NegociacoesView_Cliente.js"></script>
       <script >
       let controllerCliente = new ControllerCliente();
       </script>

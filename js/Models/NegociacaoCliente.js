@@ -25,7 +25,7 @@ class NegociacaoCliente {
     }
 
     get fornecedor() {
-        return this._Fornecedor;
+        return this._Cliente;
     }
 
     get responsavel() {

@@ -1,4 +1,4 @@
-class NegociacoesView{
+class NegociacoesView_Funcionario{
 
   constructor(elemento){
 
@@ -14,9 +14,9 @@ class NegociacoesView{
                 <thead>
                     <tr>
                       <th class=" titulo2">Código</th>
-                      <th class=" titulo2">Fornecedor</th>
-                      <th class=" titulo2">Responsável</th>
-                      <th class="titulo2">CNPJ</th>
+                      <th class=" titulo2">Funcionario</th>
+                      <th class=" titulo2">Identidade</th>
+                      <th class="titulo2">CPF</th>
                       <th class="titulo2">Endereço</th>
                       <th class="titulo2">Número</th>
                       <th class="titulo2">Bairro</th>
@@ -37,9 +37,9 @@ class NegociacoesView{
                         <!-- uso da tamplate string - para cada objeto vc cria um lista contendo uma tr - linhas e suas td - colunas-->
                             <tr>
                                 <td>${n.codigo}</td>
-                                <td>${n.fornecedor}</td>
-                                <td>${n.responsavel}</td>
-                                <td>${n.cnpj}</td>
+                                <td>${n.funcionario}</td>
+                                <td>${n.identidade}</td>
+                                <td>${n.cpf}</td>
                                 <td>${n.endereco}</td>
                                 <td>${n.numero}</td>
                                 <td>${n.bairro}</td>

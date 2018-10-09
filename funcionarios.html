@@ -181,32 +181,9 @@
        <!-- <a class="tooltip btn-floating btn-large waves-effect waves-light yellow" id="botao-sync" title="Sincronizado com Sucesso!"> -->
        <div class="  center">
        <h5 class="fas fa-address-card titulo ">Tabela de Funcionário</h5><br>
-       <table class="table table-hover table-bordered"><br>
-       <thead>
-           <tr>
-             <th class=" titulo2">Código</th>
-             <th class=" titulo2">Funcecedor</th>
-             <th class=" titulo2">Identidade</th>
-             <th class="titulo2">CPF</th>
-             <th class="titulo2">Endereço</th>
-             <th class="titulo2">Número</th>
-             <th class="titulo2">Bairro</th>
-             <th class="titulo2">Cidade</th>
-             <th class="titulo2">Estado</th>
-             <th class="titulo2">País</th>
-             <th class="titulo2">E-mail</th>
-             <th class="titulo2">Telefone</th>
-             <th class="titulo2">Segmento</th>
-             <th class="titulo2 botao-remover " >Remover</th>
-           </tr>
-       </thead>
+       <div id="negociacoesView">
 
-       <tbody>
-       </tbody>
-
-       <tfoot>
-       </tfoot>
-   </table>
+       </div>
 
  </section>
 
@@ -221,6 +198,8 @@
  <script src="js/Forms/funcionario.js"></script>
  <script src="js/Controller/ControllerFuncionario.js"></script>
  <script src="js/Models/NegociacaoFuncionario.js"></script>
+ <script src="js/Models/ListaNegociacoes_Funcionario.js"></script>
+ <script src="js/views/NegociacoesView_Funcionario.js"></script>
  <script >
      let controllerFuncionario = new ControllerFuncionario();
  </script>

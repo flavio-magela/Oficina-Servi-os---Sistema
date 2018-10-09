@@ -19,7 +19,7 @@ class ControllerFornecedor{
     //this._inputRemover = $('botao-remover');
 
     this._listaNegociacoes = new ListaNegociacoes_Fornecedor();
-    this._negociacoesView = new NegociacoesView($('#negociacoesView')); // será instanciada a tabela html que estna na negociacoesView
+    this._negociacoesView = new NegociacoesView_Fornecedor($('#negociacoesView')); // será instanciada a tabela html que estna na negociacoesView
     this._negociacoesView.update(this._listaNegociacoes); // atualiza a tabela no fornecedores.html e recebe a lista this._listaNegociacoes (new ListaNegociacoes_Fornecedor)
 
   }

@@ -1,12 +1,12 @@
 class NegociacaoFuncionario {
 
-    constructor(codigo, funcionario, responsavel, cnpj, endereco, numero, bairro, cidade, estado, pais, email, telefone, segmento) {
+    constructor(codigo, funcionario, identidade, cpf, endereco, numero, bairro, cidade, estado, pais, email, telefone, cargo) {
 
 
         this._Codigo = codigo; // utilizando o $ como objeto .bind()
         this._Funcionario = funcionario;
-        this._Responsavel = responsavel; // "_" utilizando a convenção de acessar somente dentro do método controllers.
-        this._Cnpj = cnpj;
+        this._Identidade = identidade; // "_" utilizando a convenção de acessar somente dentro do método controllers.
+        this._Cpf = cpf;
         this._Endereco = endereco;
         this._Numero = numero;
         this._Bairro = bairro;
@@ -15,7 +15,7 @@ class NegociacaoFuncionario {
         this._Pais = pais;
         this._Email = email;
         this._Telefone = telefone;
-        this._Segmento = segmento;
+        this._Cargo = cargo;
 
         Object.freeze(this);
     }
@@ -29,11 +29,11 @@ class NegociacaoFuncionario {
     }
 
     get responsavel() {
-        return this._Responsavel;
+        return this._Identidade;
     }
 
     get cnpj() {
-        return this._Cnpj;
+        return this._Cpf;
     }
     get endereco(){
         return this._Endereco;
@@ -66,6 +66,6 @@ class NegociacaoFuncionario {
     }
 
     get segmento() {
-        return this._Segmento;
+        return this._Cargo;
     }
 }
