@@ -31,9 +31,8 @@ class NegociacoesView_Funcionario{
                 </thead>
 
                 <tbody>
-                      ${model.negociacoes.map(n => {
+                      ${model.negociacoes.map(n =>  `
 
-                        return `
                         <!-- uso da tamplate string - para cada objeto vc cria um lista contendo uma tr - linhas e suas td - colunas-->
                             <tr>
                                 <td>${n.codigo}</td>
@@ -52,8 +51,7 @@ class NegociacoesView_Funcionario{
 
                             </tr>
 
-                        `
-                      }).join('')}
+                        ` ).join('')}
                 </tbody>
 
                 <tfoot>

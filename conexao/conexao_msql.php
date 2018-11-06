@@ -6,8 +6,8 @@
 	$dbname = "ra_oficina";
 
 	//Criar a conexão
-	$con = mysql_connect($servidor, $usuario, $senha);
-	$bd = mysql_select_db("ra_oficina", $con)
+	$con = mysqli_connect($servidor, $usuario, $senha);
+	$bd = mysqli_select_db("ra_oficina", $con)
 
 	//if($conn -> connect_errno){
 		//	echo "Falha na conexão: (".$conn -> connect_errno.")".$conn -> connect_error;
@@ -16,16 +16,16 @@
 		//}
 
 		if(!$con ){
-			die ("Não foi possível conectar ao Banco de Dados. " .mysql_error());
+			die ("Não foi possível conectar ao Banco de Dados. " .mysqli_error());
 		} else{
 			die ("Conexão realizada com Sucesso!!!");
 
 		}
 
-	mysql_query("SET NAME 'utf8");
-	mysql_query('SET character_set_conection=utf8');
-	mysql_query('SET character_set_client=utf8');
-	mysql_query('SET character_set_results=utf8');
+	mysqli_query("SET NAME 'utf8");
+	mysqli_query('SET character_set_conection=utf8');
+	mysqli_query('SET character_set_client=utf8');
+	mysqli_query('SET character_set_results=utf8');
 
 
 ?>

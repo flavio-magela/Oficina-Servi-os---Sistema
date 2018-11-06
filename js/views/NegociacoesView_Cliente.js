@@ -13,7 +13,7 @@ class NegociacoesView_Cliente{
                 <table class="table table-hover table-bordered"><br>
                 <thead>
                     <tr>
-                      <th class=" titulo2">Código</th>
+                      <th class=" titulo2">Codigo</th>
                       <th class=" titulo2">Cliente</th>
                       <th class=" titulo2">Responsável</th>
                       <th class="titulo2">CNPJ/CPF</th>
